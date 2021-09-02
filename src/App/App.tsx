@@ -1,16 +1,15 @@
 import React from "react";
 
-import logo from "../assets/logo.png";
+import StepsListContainer from "../steps";
 
 import styles from "./App.module.scss";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <main>
-      <img alt="Softvision" src={logo} width={320} />
-      <h1 className={styles.title}>Lets get this party started</h1>
+    <main className={styles.main}>
+      <StepsListContainer />
     </main>
   );
-}
+};
 
 export default App;

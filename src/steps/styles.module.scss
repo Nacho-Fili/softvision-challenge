@@ -1,0 +1,22 @@
+.stepsListContainer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.step{
+    width: 18%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 0 10px;
+    background-color: #eeeeee;
+    height: 100%;
+    min-height: 100px;
+    h1{
+        text-align: left;
+        font-size: 24px;
+        width: 100%;
+    }
+}

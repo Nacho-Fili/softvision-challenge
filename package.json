@@ -2,14 +2,30 @@
   "name": "softvision-challenge",
   "version": "0.0.0",
   "scripts": {
+    "start": "node server/index.js",
     "dev": "vite",
     "build": "tsc && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "test": "jest",
+    "lint": "eslint --ignore-path .gitignore . --ext .ts --ext .tsx",
+    "lint:fix": "eslint --ignore-path .gitignore . --ext .ts --ext .tsx --fix"
   },
   "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.1",
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "jest": "^27.1.0",
+    "jest-css-modules-transform": "^4.3.0",
+    "path": "^0.12.7",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
-    "sass": "^1.38.1"
+    "sass": "^1.38.1",
+    "socket.io-client": "^4.2.0",
+    "ts-jest": "^27.0.5",
+    "vite-jest": "0.0.3"
   },
   "devDependencies": {
     "@types/react": "^17.0.0",
@@ -26,6 +42,7 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "identity-obj-proxy": "^3.0.0",
     "prettier": "^2.3.2",
     "typescript": "^4.3.2",
     "vite": "^2.5.1"
