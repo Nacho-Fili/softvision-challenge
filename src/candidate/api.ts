@@ -10,11 +10,11 @@ const api: ApiService = {
   },
 
   promoteCandidate: ({id}) => {
-    EventsManager.Emitter().emit("promote", {id});
+    EventsManager.Emitter().emit("promote", {id: id});
   },
 
   backCandidate: ({id}) => {
-    EventsManager.Emitter().emit("back", {id});
+    EventsManager.Emitter().emit("back", {id: id});
   },
 };
 
