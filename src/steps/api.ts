@@ -2,10 +2,10 @@ import axios from "axios";
 
 import {ApiService} from "./types";
 
-const ENDPOINT = process.env.REACT_APP_ENDPOINT;
+const ENDPOINT = import.meta.env.REACT_APP_ENDPOINT;
 
 const api: ApiService = {
-  getSteps: () => axios.get(`${ENDPOINT}/steps`).then(({data}) => data),
+  getSteps: () => axios.get(`/steps`).then(({data}) => data),
 };
 
 export default api;
