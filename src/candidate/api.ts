@@ -1,13 +1,11 @@
-import {Candidate, ApiService} from "./types";
-import mock from "./mock";
+import axios from "axios";
+
+import {ApiService} from "./types";
 import EventsManager from "./EventsManager";
 
 const api: ApiService = {
-  getCandidatesByStep: (step: string) => {
-    return new Promise((resolve) => {
-      setTimeout(() => resolve(mock.filter((candidate) => candidate.step === step)), 200);
-    });
-  },
+  getCandidatesByStep: (step: string) =>
+    axios.get(`/candidates?step=${step}`).then(({data}) => data),
 
   promoteCandidate: ({id}) => {
     EventsManager.Emitter().emit("promote", {id: id});

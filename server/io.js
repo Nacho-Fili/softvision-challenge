@@ -7,7 +7,6 @@ const loadEvents = (server) => {
   const io = socketIO(server);
 
   io.on("connection", (socket) => {
-    console.log("Connection\n");
     socket.on("promote", (args) => {
       const {id} = args[0];
       const candidate = candidates.find((candidate) => candidate.id === id);
